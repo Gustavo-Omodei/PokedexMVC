@@ -1,0 +1,37 @@
+<!DOCTipo html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Treinador</title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+    <form action="cadastrar-treinador" method="POST">
+        <label for="nomeTreinador">Nome:</label>
+        <input type="text" name="nomeTreinador" id="nomeTreinador" required>
+
+        <label for="genero">Gênero (M/F):</label>
+        <input type="text" name="genero" id="genero" required>
+
+        <label for="nomeRival">Nome do rival:</label>
+        <input type="text" name="nomeRival" id="nomeRival" required>
+
+        <p>Escolha um Pokémon Inicial:</p>
+        <select name="pokemonInicial" id="pokemonInicial" required>
+            <% pokemons.forEach(function(pokemon) { %>
+                <option value="<%= pokemon.id %>">
+                    <%= pokemon.nome %> - <%= pokemon.tipo %>
+                </option>
+            <% }); %>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+ul {
+    flex-direction: column;
+    display: flex;
+}
+
+form {
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    width: 350px;
+}
+
+input {
+    margin-bottom: 10px;
+    outline: none;
+}
+
+select {
+    margin-bottom: 10px;
+    text-align: center;
+}

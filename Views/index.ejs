@@ -1,19 +1,32 @@
 <!DOCtipo html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Pokédex</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
+
+    <ul>
+        <a href="/">Tela inicial</a>
+        <a href="cadastrar-pokemon">Cadastrar pokemons</a>
+        <a href="cadastrar-treinador">Cadastrar Treinador</a>
+    </ul>
+
     <h1>Pokédex</h1>
     <ul>
         <% pokemons.forEach(function(pokemon) { %>
             <li>
-                <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %>
-                </a> - <%= pokemon.tipo %>
+                <a href="/pokemon/<%= pokemon.id %>">
+                    <%= pokemon.nome %>
+                </a> -
+                <%= pokemon.tipo %>
             </li>
             <% }); %>
     </ul>
-    
+
 </body>
+
 </html>

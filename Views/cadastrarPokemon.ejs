@@ -1,18 +1,25 @@
-<!DOCtipo html>
-<html lang="en">
+<!DOCTipo html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrar pokemon</title>
+    <title>Cadastrar Pokémon</title>
+    <link rel="stylesheet" href="/styles.css">
+
 </head>
+
 <body>
 
-    <form action="">
-        <label for="Nome"></label>
-        <input type="text" name="Nome" id="nomePokemon">
-        <label for="Tipo"></label>
-        <input type="text" name="Tipo" id="tipoPokemon">
+    <form action="cadastrar-pokemon" method="POST">
+        <label for="nomePokemon">Nome:</label>
+        <input type="text" name="Nome" id="nomePokemon" required>
+
+        <label for="tipoPokemon">Tipo:</label>
+        <input type="text" name="Tipo" id="tipoPokemon" required>
+
         <button type="submit">Cadastrar</button>
     </form>
-    
+
 </body>
+
 </html>
